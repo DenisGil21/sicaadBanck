@@ -27,6 +27,7 @@ Route::get('/auth/renew', [AuthController::class, 'renew'])->middleware('auth:sa
 Route::get('/auth/logout', [AuthController::class, 'logout'])->middleware('auth:sanctum');
 Route::get('/user/menu', [AuthController::class, 'userMenu'])->middleware('auth:sanctum');
 Route::post('/user/list', [UsuariosController::class, 'list'])->middleware('auth:sanctum');
+Route::post('/user/crear', [UsuariosController::class, 'crear'])->middleware('auth:sanctum');
 Route::post('/user/borrar', [UsuariosController::class, 'borrar'])->middleware('auth:sanctum');
 
 Route::get('/ui/areas', [UIController::class, 'areas'])->middleware('auth:sanctum');
